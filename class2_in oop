@@ -1,0 +1,30 @@
+class judaism:
+
+    def __init__(self,god,book,prophet, place):
+
+        self.god=god
+        self.book=book
+        self.prophet=prophet
+        self.place=place
+
+    def the_idea(self):
+            
+            
+            idea="the beleive in one god"
+            return idea
+
+class christianity(judaism):
+
+
+    pass
+
+
+class islam(christianity):
+
+    pass
+
+e1=islam("alahh","quraan","mohammed","maka")
+
+
+print(e1.god,e1.book,e1.prophet,e1.place)
+print (e1.the_idea())
