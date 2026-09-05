@@ -1,0 +1,53 @@
+class employee:
+    def __init__(self,name,base_salary):
+     self.name=name
+     self.base_salary=base_salary
+
+    def get_diffrent(self):
+     return f"the name is :{self.name}:the value of salary {self.base_salary}"
+
+
+class developer(employee):
+   def __init__(self, name, base_salary,programing_language):
+     
+     super().__init__(name,base_salary)
+
+     self.programing_language=programing_language 
+
+   def get_information(self):
+     
+     return f"the language programing is {self.programing_language}"
+
+
+class teachled(developer):
+  
+  def __init__(self, name, base_salary, programing_language,team_size,bonus):
+    super().__init__(name, base_salary, programing_language)
+
+    self.team_size=team_size
+    self.bonus=bonus
+    
+  def total_value(self):
+     return self.base_salary + self.bonus
+
+
+object1=teachled(
+  name="ali",
+  base_salary=5000,
+  programing_language="python",
+  team_size=8,
+  bonus= 1000
+
+)
+
+print(object1.name,
+      object1.base_salary,
+      object1.programing_language
+      ,object1.team_size
+      ,object1.bonus)
+
+print(object1.total_value())
+
+print(object1.get_diffrent())
+
+print(object1.get_information())
